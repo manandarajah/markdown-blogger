@@ -1,0 +1,10 @@
+<h1 [ngClass]="title === 'Loading...' ? 'loading-text' : ''">{{title}}</h1>
+<div class="row">
+  <div *ngFor="let blog of blogs" class="card col-3" [routerLink]="['/blog']" [queryParams]="{id: blog.uuid}">
+    <div class="card-body">
+      <h3 class="card-title">{{blog.title}}</h3>
+      <p class="card-text">{{blog.summary}}</p>
+      <p class="card-text">{{blog.creation_date}}</p>
+    </div>
+  </div>
+</div>

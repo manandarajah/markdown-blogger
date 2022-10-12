@@ -1,0 +1,38 @@
+<form #signupForm="ngForm" (ngSubmit)="registerUser(signupForm.value)" class="" action="index.html" method="post">
+  <h1>Create an account</h1>
+  <div class="form-floating mb-3 mt-3">
+    <div class="form-floating mb-3 mt-3">
+      <input id="username" type="text" class="form-control form-control" name="username" ngModel value="" required>
+      <label for="username">Username</label>
+    </div>
+    <div class="form-floating mb-3 mt-3">
+      <input id="Email" type="text" class="form-control form-control" name="email" ngModel value="" required>
+      <label for="Email">Email</label>
+    </div>
+    <div class="form-floating mb-3 mt-3">
+      <input id="password" type="password" class="form-control form-control" name="password" ngModel value="" required>
+      <label for="password">Password</label>
+    </div>
+    <div class="form-floating mb-3 mt-3">
+      <input id="cpass" type="password" class="form-control form-control" name="cpassword" ngModel value="" required>
+      <label for="cpass">Confirm Password</label>
+    </div>
+    <div class="form-floating mb-3 mt-3">
+      <input id="fname" type="text" class="form-control form-control" name="fname" ngModel value="" required>
+      <label for="fname">First Name</label>
+    </div>
+    <div class="form-floating mb-3 mt-3">
+      <input id="lname" type="text" class="form-control form-control" name="lname" ngModel value="" required>
+      <label for="lname">Last Name</label>
+    </div>
+    <div class="form-floating mb-3 mt-3">
+      <input id="phone" type="number" class="form-control form-control" name="phone" ngModel value="" required>
+      <label for="phone">Phone</label>
+    </div>
+    <div class="form-floating mb-3 mt-3">
+      <input id="bdate" type="date" class="form-control form-control" name="bdate" ngModel value="" required>
+      <label for="bdate">Birth Date:</label>
+    </div>
+  </div>
+  <input type="submit" class="btn btn-info" name="" value="Sign up">
+</form>

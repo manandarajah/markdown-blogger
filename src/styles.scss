@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+@font-face {
+    font-family: 'Force Commander Condensed';
+    src: local('Force Commander Condensed Italic'), local('ForceCommanderCondensedItalic'),
+        url('./assets/fonts/ForceCommanderCondensedItalic.woff2') format('woff2'),
+        url('./assets/fonts/ForceCommanderCondensedItalic.woff') format('woff');
+}
+
+body {
+  background-color: #e6faff;
+}
+
+.padded-list > li {
+  padding-top: 20px;
+}

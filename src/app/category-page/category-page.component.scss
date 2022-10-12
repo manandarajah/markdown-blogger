@@ -1,0 +1,17 @@
+.card {
+  background-color: #ffffe6;
+  background-image: linear-gradient(#ffffe6, rgba(0,0,0,.125));
+  width: 350px;
+  margin: 0px 20px 20px 0px;
+}
+
+.loading-text {
+  text-align: center;
+  animation: text-animation 1s infinite;
+  animation-direction: alternate; 
+}
+
+@keyframes text-animation {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}

@@ -1,0 +1,5 @@
+<h1 [ngClass]="this.getTitle() === 'Loading...' ? 'loading-text' : ''">{{this.getTitle()}}</h1>
+<markdown class="markdown" [data]="this.getContent()"></markdown>
+<p>{{this.getDate()}}</p>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,41 @@
+<div class="" *ngIf="uuid">
+  <form #postBlog="ngForm" (ngSubmit)="upload(postBlog.value)" method="post">
+    <div class="form-floating mb-3 mt-3">
+      <input id="title" type="text" class="form-control form-control-lg" name="title" [(ngModel)]="title" required>
+      <label for="title">Blog Title</label>
+    </div>
+    <div class="form-floating mb-3 mt-3">
+      <select multiple class="form-select" style="height:240px;" id="categories" [(ngModel)]="categories" name="categories">
+        <option>Personal</option>
+      </select>
+      <label for="categories" class="form-label">Select categories (multi-select)</label>
+    </div>
+    <div class="form-floating mb-3 mt-3">
+      <select class="form-select" id="select_blog" (change)="update(postBlog.value)" ngModel name="select_blog" required>
+        <option value="newblog">Add New Blog...</option>
+        <option *ngFor="let blog of blogs" [ngValue]="blog">{{blog['title']}}</option>
+      </select>
+      <label for="select_blog" class="form-label">Select current blog (or upload new)</label>
+    </div>
+    <div class="form-floating mb-3 mt-3">
+      <input id="summary" type="text" class="form-control form-control-lg" name="summary" [(ngModel)]="summary" maxlength="150" required>
+      <label for="summary">Summary</label>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-floating mb-3 mt-3">
+          <textarea id="content" class="form-control" style="height:1000px;" name="content" [(ngModel)]="content" required></textarea>
+          <label for="content">Blog Content</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-floating mb-3 mt-3">
+          <h1>{{this.title}}</h1>
+          <markdown ngPreserveWhitespaces [data]="content"></markdown>
+        </div>
+      </div>
+    </div>
+    <input type="hidden" [(ngModel)]="blog_uuid" name="blog_uuid">
+    <input type="submit" class="btn btn-info" name="" value="Upload Blog">
+  </form>
+</div>
