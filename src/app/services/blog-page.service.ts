@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class BlogPageService {
-  private server_url : string = "https://nga-backend.herokuapp.com";
+  private server_url : string = "https://blog-handler-backend.herokuapp.com";
 
   constructor(private httpClient : HttpClient) {
    }
