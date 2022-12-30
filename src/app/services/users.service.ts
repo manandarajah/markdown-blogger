@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UsersService {
-  private server_url : string = "https://blog-handler-backend.herokuapp.com";
+  private server_url : string = "https://blog-handler-service.onrender.com";
 
   constructor(private httpClient : HttpClient) {
 

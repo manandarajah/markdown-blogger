@@ -5,7 +5,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CategoriesService {
-  private server_url : string = "https://blog-handler-backend.herokuapp.com";
+  private server_url : string = "https://blog-handler-service.onrender.com";
 
   constructor(private httpClient : HttpClient) {
    }
